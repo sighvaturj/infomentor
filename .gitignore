@@ -1,0 +1,22 @@
+# Node modules
+node_modules/
+
+# Build output
+dist/
+bin/
+obj/
+
+# Logs
+*.log
+
+# Environment files
+.env
+.env.local
+appsettings.Development.json
+
+# Cypress files
+cypress/screenshots/
+cypress/videos/
+
+# Other
+.DS_Store
