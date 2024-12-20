@@ -94,6 +94,24 @@ cd WeatherServiceApp
    ```
    The frontend will be available at: `http://localhost:5173`(http://localhost:5173).
 
+### 3. Running Tests
+
+1. Backend Tests
+
+Navigate to the `WeatherServiceApp/WeatherServiceApp.Tests` folder and run:
+
+```bash
+dotnet test
+```
+
+2. Frontend Tests
+
+Navigate to the `frontend/vue-weather-service-app` folder and run:
+
+```bash
+npx cypress open
+```
+
 ---
 
 ## Project Features
@@ -124,26 +142,6 @@ cd WeatherServiceApp
    ```bash
    curl "http://localhost:5000/Weather/ByStation?ids=6015"
    ```
-
----
-
-## Running Tests
-
-### Backend Tests
-
-Navigate to the `backend` folder and run:
-
-```bash
-dotnet test
-```
-
-### Frontend Tests
-
-Navigate to the `frontend/vue-weather-service-app` folder and run:
-
-```bash
-npx cypress open
-```
 
 ---
 
