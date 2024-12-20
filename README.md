@@ -40,7 +40,7 @@ WeatherServiceApp
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/sighvaturj/WeatherServiceApp.git
+git clone https://github.com/sighvaturj/infomentor.git
 cd WeatherServiceApp
 ```
 
@@ -70,7 +70,7 @@ cd WeatherServiceApp
    ```bash
    dotnet run
    ```
-   The backend will be available in Swagger `http://localhost:5000/index.html`.
+   The backend will be available in Swagger at: `http://localhost:5000/index.html`(http://localhost:5000/index.html).
 
 ---
 
@@ -92,7 +92,7 @@ cd WeatherServiceApp
    ```bash
    npm run dev
    ```
-   The frontend will be available at `http://localhost:5173`.
+   The frontend will be available at: `http://localhost:5173`(http://localhost:5173).
 
 ---
 
@@ -145,60 +145,6 @@ Navigate to the `frontend/vue-weather-service-app` folder and run:
 npx cypress open
 ```
 
-#### Cypress Example Test
-
-This Cypress test checks the dropdown menu for the correct weather station names:
-
-```typescript
-describe("Weather Stations Dropdown", () => {
-  beforeEach(() => {
-    cy.visit("/");
-  });
-
-  it("should display the correct station names and values in the dropdown", () => {
-    const dropdownSelector = ".weather-stations select";
-
-    const expectedNames = [
-      "-- Select a Station --",
-      "Akrafjall",
-      "Akureyri",
-      "Reykjanesbraut",
-      "Reykjavik",
-      "Vestmannaeyjar",
-    ];
-
-    const expectedIds = [
-      "", // Placeholder option
-      "31572",
-      "3471",
-      "31363",
-      "1475",
-      "6015",
-    ];
-
-    cy.get(dropdownSelector)
-      .find("option")
-      .then((options) => {
-        const actualNames = [...options].map((option) => option.text.trim());
-        expect(actualNames).to.deep.equal(expectedNames);
-      });
-
-    cy.get(dropdownSelector)
-      .find("option")
-      .then((options) => {
-        const actualValues = [...options].map((option) => option.value.trim());
-        expect(actualValues).to.deep.equal(expectedIds);
-      });
-  });
-
-  it("should allow the user to select a weather station", () => {
-    cy.get(".weather-stations select")
-      .select("Akrafjall") // Select by visible text
-      .should("have.value", "31572"); // Ensure the value is correct
-  });
-});
-```
-
 ---
 
 ## Task List for the Project
@@ -210,44 +156,7 @@ describe("Weather Stations Dropdown", () => {
 - [x] Add backend tests in xUnit.
 - [x] Add frontend tests in Cypress.
 - [x] Update documentation in README.
-- [ ] Create a GitHub repo for the project, upload.
-- [ ] Send an email to Infomentor with a link to GitHub and a ZIP file of the source code.
-
----
-
-## Excluded Files and Folders
-
-To keep the repository size small, the following files and folders are excluded using `.gitignore`:
-
-```plaintext
-# Node modules
-node_modules/
-
-# Build output
-dist/
-bin/
-obj/
-
-# Logs
-*.log
-
-# Environment files
-.env
-.env.local
-appsettings.Development.json
-
-# Cypress files
-cypress/screenshots/
-cypress/videos/
-
-# Other
-.DS_Store
-```
-
----
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
+- [x] Create a GitHub repo for the project, upload.
+- [x] Send an email to Infomentor with a link to the GitHub repo.
 
 ---
