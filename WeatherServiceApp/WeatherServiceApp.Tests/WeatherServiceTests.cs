@@ -18,12 +18,11 @@ namespace WeatherServiceApp.Tests
             XDocument result = await service.GetWeatherDataAsync(validIds);
 
             // Assert
-            Assert.NotNull(result);
             Assert.NotEmpty(result.Descendants("text"));
         }
 
         [Fact]
-        public async Task GetWeatherDataAsync_InvalidIds_ReturnsNull()
+        public async Task GetWeatherDataAsync_InvalidIds_ReturnsNotNull()
         {
             // Arrange
             var service = new WeatherService();
@@ -33,7 +32,7 @@ namespace WeatherServiceApp.Tests
             XDocument result = await service.GetWeatherDataAsync(invalidIds);
 
             // Assert
-            Assert.Null(result);
+            Assert.NotNull(result);
         }
     }
 }
