@@ -114,6 +114,8 @@ Navigate to the `frontend/vue-weather-service-app` folder and run:
 npx cypress open
 ```
 
+When Cypress opens select the test file `weatherStations.cy.ts`
+
 ---
 
 ## Project Features
