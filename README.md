@@ -94,7 +94,9 @@ cd WeatherServiceApp
    ```
    The frontend will be available at: `http://localhost:5173`(http://localhost:5173).
 
-### 3. Running Tests
+---
+
+### 4. Running Tests
 
 1. Backend Tests
 
